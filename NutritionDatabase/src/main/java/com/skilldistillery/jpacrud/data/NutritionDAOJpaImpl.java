@@ -32,12 +32,10 @@ public class NutritionDAOJpaImpl implements NutritionDAO {
 	@Override
 	public Food addFood(Food food) {
 		System.out.println("Before persist" + food);
-		em.getTransaction().begin();
 		em.persist(food);
 		em.flush();
-		em.getTransaction().commit();
 		em.close();
-		System.out.println("New food item added to the Nutrition Database!");
+		System.out.println("New food added " + food);
 		return food;
 	}
 

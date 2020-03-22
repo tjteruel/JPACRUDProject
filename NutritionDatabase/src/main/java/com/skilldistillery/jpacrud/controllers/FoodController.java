@@ -36,17 +36,13 @@ public class FoodController {
 	public String addFoodPage() {
 		return"Food/addFood";
 	}
-	//********delete if addFoodPage.do functions************
-//	@RequestMapping(path = "createFoodPage.do")
-//	public String createPage() {
-//		return "Food/createFood";
-//	}
 	
 	@RequestMapping(path = "addFood.do", method = RequestMethod.POST)
 	public ModelAndView addFood(Food food) {
 		dao.addFood(food);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
+		mv.addObject("food",food);
+		mv.setViewName("Food/foodAdded");
 		return mv;
 	}
 	

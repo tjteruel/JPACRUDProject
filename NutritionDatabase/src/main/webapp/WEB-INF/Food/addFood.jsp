@@ -20,19 +20,19 @@
 				name="serving" id="serving" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="calories">Calories: </label> <input type="number" name="calories"
+			<label for="calories">Calories Per Serving: </label> <input type="number" name="calories"
 				id="calories" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="carbohydrates">Carbohydrates in grams: </label> <input type="text"
+			<label for="carbohydrates">Carbohydrates In Grams: </label> <input type="text"
 				name="carbohydrates" id="carbohydrates" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="fats">Fats in grams: </label> <input type="text" name="fats"
+			<label for="fats">Fats In Grams: </label> <input type="text" name="fats"
 				id="fats" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="proteins">Proteins in grams: </label> <input type="text" name="proteins"
+			<label for="proteins">Proteins In Grams: </label> <input type="text" name="proteins"
 				id="proteins" class="form-control" required />
 		</div>
 		<input type="submit" value="Add Food" class="btn btn-primary" />
