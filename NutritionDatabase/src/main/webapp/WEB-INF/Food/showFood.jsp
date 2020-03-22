@@ -16,32 +16,38 @@
 <body>
 
 	<div class="container-fluid">
-		<h5>${food.name},Serving Size: (${food.servingSize})</h5>
+		<h5>${food.name}, Serving Size: (${food.servingSize})</h5>
 		<table class="table table-striped">
 			<thead class="thead thead-dark">
 				<tr>
-					<th>Calories</th>
+					<th>Calories Per Serving</th>
 					<th>Carbohydrates</th>
 					<th>Fats</th>
 					<th>Protein</th>
 				</tr>
 			<tbody>
 				<tr>
-					<td>${food.calories}calories</td>
-					<td>${food.carbohydrates}grams</td>
-					<td>${food.fats}grams</td>
-					<td>${food.proteins}grams</td>
+					<td>${food.calories} calories</td>
+					<td>${food.carbohydrates} grams</td>
+					<td>${food.fats} grams</td>
+					<td>${food.proteins} grams</td>
 				</tr>
 			</thead>
 			</tbody>
 		</table>
 	</div>
 
+<!-- Updates Food -->
 	<form action="updatePage.do" method="POST">
 		<input type="hidden" value="${food.id}" name="food" /> <input
 			type="submit" value="Update" class="btn btn-primary" />
 	</form>
 
+<!-- Deletes Food -->
+	<form action="deleteFood.do" method="POST">
+		<input type="hidden" value="${food.id}" name="food"/>
+		<input type="submit" value="Delete" class="btn btn-primary"/>
+	</form>
 	</tbody>
 	</table>
 

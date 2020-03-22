@@ -33,6 +33,7 @@
 	<table class="table table-striped">
 		<thead class="thead thead-dark">
 			<tr>
+				<th>Food ID</th>
 				<th>Food Name</th>
 				<th>Calories Per Serving</th>
 			</tr>
@@ -40,6 +41,7 @@
 		<tbody>
 			<c:forEach var="f" items="${food}">
 				<tr>
+					<td>${f.id}</td>
 					<td><a href="getFood.do?fid=${f.id}">${f.name}</a></td>
 					<td>${f.calories}</td>
 				</tr>

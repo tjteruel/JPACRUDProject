@@ -39,4 +39,25 @@ public class NutritionDAOJpaImpl implements NutritionDAO {
 		return food;
 	}
 
+	@Override
+	public Food updateFood(Food food, int id) {
+		String query = "SELECT f FROM Food f WHERE f.id = :updateId";
+		Food updating = em.createQuery(query, Food.class).setParameter("updateId", id).getSingleResult();
+		updating.setName(food.getName());
+		updating.setServingSize(food.getServingSize());
+		updating.setCalories(food.getCalories());
+		updating.setCarbohydrates(food.getCarbohydrates());
+		updating.setFats(food.getFats());
+		updating.setProteins(food.getProteins());
+		em.flush();
+		return updating;
+	}
+	
+	@Override
+	public void deleteFood(Food food) {
+		System.out.println("Deleting " + food);
+		em.remove(food);
+		em.flush();
+	}
+
 }
