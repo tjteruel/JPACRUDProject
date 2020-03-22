@@ -42,7 +42,7 @@ class FoodTest {
 	@Test
 	void test() {
 		assertNotNull(food);
-		assertEquals("chicken", food.getName());
+		assertEquals("chicken breast", food.getName());
 	}
 
 }

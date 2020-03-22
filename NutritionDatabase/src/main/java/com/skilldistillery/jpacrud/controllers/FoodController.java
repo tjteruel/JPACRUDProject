@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.jpacrud.data.NutritionDAO;
@@ -27,8 +28,9 @@ public class FoodController {
 		return "Food/createFood";
 	}
 	
-	@RequestMapping(path = "listFoods.do")
-	public String showFilm(Model model) {
+	@RequestMapping(path = "listFoods.do", method = RequestMethod.GET, params = "fid")
+	public String showFilm(@RequestParam Integer fid, Model model) {
+		Food food = dao.findById(fid);
 		model.addAttribute("foods", dao.findAll());
 		return "Food/listAllFoods";
 	}

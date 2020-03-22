@@ -15,25 +15,25 @@
 		</div>
 		<div class="form-group">
 			<label for="breed">Serving Size: </label> <input type="text"
-				name="breed" id="breed" class="form-control" required />
+				name="serving" id="serving" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="age">Calories: </label> <input type="number" name="age"
-				id="age" class="form-control" required />
+			<label for="age">Calories: </label> <input type="number" name="calories"
+				id="serving" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="color">Carbohydrates: </label> <input type="text"
-				name="color" id="color" class="form-control" required />
+			<label for="carbohydrates">Carbohydrates: </label> <input type="text"
+				name="carbohydrates" id="carbohydrates" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="color">fats: </label> <input type="text" name="color"
-				id="color" class="form-control" required />
+			<label for="fats">Fats: </label> <input type="text" name="fats"
+				id="fats" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="color">Proteins: </label> <input type="text" name="color"
-				id="color" class="form-control" required />
+			<label for="proteins">Proteins: </label> <input type="text" name="proteins"
+				id="proteins" class="form-control" required />
 		</div>
-		<input type="submit" value="Add Cat" class="btn btn-primary" />
+		<input type="submit" value="Add Food" class="btn btn-primary" />
 	</form>
 </body>
 </html>

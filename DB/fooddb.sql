@@ -23,6 +23,11 @@ DROP TABLE IF EXISTS `food` ;
 CREATE TABLE IF NOT EXISTS `food` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
+  `serving_size` VARCHAR(45) NULL,
+  `calories` INT NULL,
+  `carbohydrates` INT NULL,
+  `fats` INT NULL,
+  `proteins` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -42,7 +47,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `nutritionDB`;
-INSERT INTO `food` (`id`, `name`) VALUES (1, 'chicken');
+INSERT INTO `food` (`id`, `name`, `serving_size`, `calories`, `carbohydrates`, `fats`, `proteins`) VALUES (1, 'chicken breast', '4oz', 126, NULL, 2, 30);
+INSERT INTO `food` (`id`, `name`, `serving_size`, `calories`, `carbohydrates`, `fats`, `proteins`) VALUES (2, 'chicken thigh', '4oz', 236, NULL, 12, 30);
+INSERT INTO `food` (`id`, `name`, `serving_size`, `calories`, `carbohydrates`, `fats`, `proteins`) VALUES (3, 'ground beef', '4oz', 200, NULL, 11, 23);
+INSERT INTO `food` (`id`, `name`, `serving_size`, `calories`, `carbohydrates`, `fats`, `proteins`) VALUES (4, 'white rice', '1 cup cooked', 205, 45, NULL, 4);
+INSERT INTO `food` (`id`, `name`, `serving_size`, `calories`, `carbohydrates`, `fats`, `proteins`) VALUES (5, 'egg ', '1 large', 70, 1, 5, 6);
 
 COMMIT;
 
