@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,32 +15,32 @@
 </head>
 <body>
 	<h1>Nutrition Database</h1>
-<!-- 	<form action="listFoods.do" method="GET" class="form">
+	<!-- 	<form action="listFoods.do" method="GET" class="form">
 		<input type="submit" value="List All Foods" class="form-control" />
 	</form> -->
-<!-- 		<form action="createFoodPage.do" method="GET" class="form">
+	<!-- 		<form action="createFoodPage.do" method="GET" class="form">
 			<input type="submit" value="Add Food" class="form-control" />
 		</form> -->
-		<form action="getFood.do" method="GET" class="form">
-			Food ID: <input type="text" name="fid" class="form-control" /> 
-			<inputn type="submit" value="Show Food" class="form-control" />
-		</form>
-				<table class="table table-striped">
-			<thead class="thead thead-dark">
+	<form action="getFood.do" method="GET" class="form">
+		Look Up Food By ID: <input type="text" name="fid" class="form-control" />
+		<input type="submit" value="Show Food" class="form-control" />
+	</form>
+	<table class="table table-striped">
+		<thead class="thead thead-dark">
+			<tr>
+				<th>Food Name</th>
+				<th>Calories</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="f" items="${food}">
 				<tr>
-					<th>Food Name</th>
-					<th>Calories</th>
+					<td><a href="getFood.do?fid=${f.id}">${f.name}</a></td>
+					<td>${f.calories}</td>
 				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="f" items="${foods}">
-					<tr>
-						<td><a href="getFood.do?fid=${f.id}">${f.name}</a></td>
-						<td>${f.calories}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-			</tbody>
-		</table>
+			</c:forEach>
+		</tbody>
+		</tbody>
+	</table>
 </body>
 </html>

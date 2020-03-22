@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +14,30 @@
 <link rel="stylesheet" href="css/myStyles.css">
 </head>
 <body>
-	<h2>List of Food</h2>
+
+	<div class="container-fluid">
+		<h5>${food.name}	Serving Size: (${food.servingSize})</h5>
+		<table class="table table-striped">
+			<thead class="thead thead-dark">
+				<tr>
+					<th>Calories</th>
+					<th>Carbohydrates</th>
+					<th>Fats</th>
+					<th>Protein</th>
+				</tr>
+			<tbody>
+				<tr>
+					<td>${food.calories} calories</td>
+					<td>${food.carbohydrates} grams</td>
+					<td>${food.fats} grams</td>
+					<td>${food.proteins} grams</td>
+				</tr>
+		</thead>
+			</tbody>
+		</table>
+
+	</div>
+	<%-- 	<h2>List of Food</h2>
 	<table class="table table-striped">
 		<thead class="thead thead-dark">
 			<tr>
@@ -23,20 +48,20 @@
 				<th>Fats</th>
 				<th>Protein</th>
 			</tr>
-			</thead>
-			<tbody>
-			<c: forEach var="f" items="${foods}">
-			<tr>
-					<td>${f.name}</td>					
+		</thead>
+		<tbody>
+			<c:forEach var="f" items="${foods}">
+				<tr>
+					<td>${f.name}</td>
 					<td>${f.servingSize}</td>
 					<td>${f.calories}</td>
 					<td>${f.carbohydrates}</td>
 					<td>${f.fats}</td>
-					<td>${f.proteins}</td>	
-					</tr>
-					</c: forEach>		
-					</tbody>
-					</table>
-					
+					<td>${f.proteins}</td>
+				</tr>
+			</c:forEach> --%>
+	</tbody>
+	</table>
+
 </body>
 </html>

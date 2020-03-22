@@ -28,11 +28,11 @@ public class FoodController {
 		return "Food/createFood";
 	}
 	
-	@RequestMapping(path = "listFoods.do", method = RequestMethod.GET, params = "fid")
+	@RequestMapping(path = "getFood.do", method = RequestMethod.GET, params = "fid")
 	public String showFilm(@RequestParam Integer fid, Model model) {
 		Food food = dao.findById(fid);
-		model.addAttribute("foods", food);
-		return "Food/listAllFood";
+		model.addAttribute("food", food);
+		return "Food/showFood";
 	}
 	
 //	@RequestMapping(path = "addFood.do", method = RequestMethod.POST)
