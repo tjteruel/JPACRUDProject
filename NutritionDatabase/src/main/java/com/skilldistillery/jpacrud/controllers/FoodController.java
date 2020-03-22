@@ -23,10 +23,7 @@ public class FoodController {
 		return "index";
 	}
 	
-	@RequestMapping(path = "createFoodPage.do")
-	public String createPage() {
-		return "Food/createFood";
-	}
+	
 	
 	@RequestMapping(path = "getFood.do", method = RequestMethod.GET, params = "fid")
 	public String showFilm(@RequestParam Integer fid, Model model) {
@@ -35,12 +32,38 @@ public class FoodController {
 		return "Food/showFood";
 	}
 	
-//	@RequestMapping(path = "addFood.do", method = RequestMethod.POST)
-//	public ModelAndView addFood(Food food) {
-//		dao.addFood(food);
+	@RequestMapping(path = "addFoodPage.do", method = RequestMethod.POST)
+	public String addFoodPage() {
+		return"Food/addFood";
+	}
+	//********delete if addFoodPage.do functions************
+//	@RequestMapping(path = "createFoodPage.do")
+//	public String createPage() {
+//		return "Food/createFood";
+//	}
+	
+	@RequestMapping(path = "addFood.do", method = RequestMethod.POST)
+	public ModelAndView addFood(Food food) {
+		dao.addFood(food);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("index");
+		return mv;
+	}
+	
+//	@RequestMapping(path = "updatePage.do", method = RequestMethod.POST)
+//	public ModelAndView updateCat(@RequestParam("food") int id) {
+//		Food food = dao.findById(id);
 //		ModelAndView mv = new ModelAndView();
-//		mv.setViewName("index");
+//		mv.addObject("cat", food);
+//		mv.setViewName("Food/updateFood");
 //		return mv;
 //	}
+//	
+//	@RequestMapping(path = "updateFood.do", method = RequestMethod.POST)
+//	public String updateCat(@RequestParam("id")int id, Food food) {
+////		dao.updateFood(food, id);
+//		return "index";
+//	}
+
 
 }

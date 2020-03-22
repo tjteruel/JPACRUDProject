@@ -7,7 +7,7 @@ import com.skilldistillery.jpacrud.entities.Food;
 public interface NutritionDAO {
 	Food findById(int id);
 	List<Food> findAll();
-//	public void addFood(Food food);
+	public Food addFood(Food food);
 
 
 }

@@ -15,21 +15,26 @@
 </head>
 <body>
 	<h1>Nutrition Database</h1>
-	<!-- 	<form action="listFoods.do" method="GET" class="form">
-		<input type="submit" value="List All Foods" class="form-control" />
-	</form> -->
-	<!-- 		<form action="createFoodPage.do" method="GET" class="form">
-			<input type="submit" value="Add Food" class="form-control" />
-		</form> -->
+
+<!-- Lookup food by ID -->
 	<form action="getFood.do" method="GET" class="form">
 		Look Up Food By ID: <input type="text" name="fid" class="form-control" />
 		<input type="submit" value="Show Food" class="form-control" />
 	</form>
+
+<!-- add Food to db -->
+	<h3>Add Food to Database</h3>
+	<form action="addFoodPage.do" method="POST" class="form">
+		<input type="submit" value="Add Food" class="form-control" />
+	</form>
+
+<!-- Lists entire db -->
+	<h3>All Foods in Database</h3>
 	<table class="table table-striped">
 		<thead class="thead thead-dark">
 			<tr>
 				<th>Food Name</th>
-				<th>Calories</th>
+				<th>Calories Per Serving</th>
 			</tr>
 		</thead>
 		<tbody>
