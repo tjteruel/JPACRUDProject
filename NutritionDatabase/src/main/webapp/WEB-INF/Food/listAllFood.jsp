@@ -25,14 +25,14 @@
 			</tr>
 			</thead>
 			<tbody>
-			<c: forEach var="food" items="${foods}">
+			<c: forEach var="f" items="${foods}">
 			<tr>
-					<td>${food.name}</td>					
-					<td>${food.servingSize}</td>
-					<td>${food.calories}</td>
-					<td>${food.carbohydrates}</td>
-					<td>${food.fats}</td>
-					<td>${food.proteins}</td>	
+					<td>${f.name}</td>					
+					<td>${f.servingSize}</td>
+					<td>${f.calories}</td>
+					<td>${f.carbohydrates}</td>
+					<td>${f.fats}</td>
+					<td>${f.proteins}</td>	
 					</tr>
 					</c: forEach>		
 					</tbody>

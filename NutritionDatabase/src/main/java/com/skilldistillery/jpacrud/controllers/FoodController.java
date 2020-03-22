@@ -31,16 +31,16 @@ public class FoodController {
 	@RequestMapping(path = "listFoods.do", method = RequestMethod.GET, params = "fid")
 	public String showFilm(@RequestParam Integer fid, Model model) {
 		Food food = dao.findById(fid);
-		model.addAttribute("foods", dao.findAll());
-		return "Food/listAllFoods";
+		model.addAttribute("foods", food);
+		return "Food/listAllFood";
 	}
 	
-	@RequestMapping(path = "addFood.do", method = RequestMethod.POST)
-	public ModelAndView addFood(Food food) {
-		dao.addFood(food);
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
-		return mv;
-	}
+//	@RequestMapping(path = "addFood.do", method = RequestMethod.POST)
+//	public ModelAndView addFood(Food food) {
+//		dao.addFood(food);
+//		ModelAndView mv = new ModelAndView();
+//		mv.setViewName("index");
+//		return mv;
+//	}
 
 }

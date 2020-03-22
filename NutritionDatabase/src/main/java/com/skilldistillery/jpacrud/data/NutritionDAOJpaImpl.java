@@ -25,14 +25,15 @@ public class NutritionDAOJpaImpl implements NutritionDAO {
 	@Override
 	public List<Food> findAll() {
 		String query = "SELECT f FROM Food f";
-		return em.createQuery(query, Food.class).getResultList();
+		List <Food> foods = em.createQuery(query, Food.class).getResultList();
+		return foods;
 	}
 	
-	@Override
-	public void addFood(Food food) {
-		em.persist(food);
-		em.flush();
-		System.out.println("New food item added to the Nutrition Database!");
-	}
+//	@Override
+//	public void addFood(Food food) {
+//		em.persist(food);
+//		em.flush();
+//		System.out.println("New food item added to the Nutrition Database!");
+//	}
 
 }
