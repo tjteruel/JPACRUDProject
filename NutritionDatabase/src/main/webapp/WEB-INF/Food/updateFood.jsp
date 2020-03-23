@@ -16,33 +16,35 @@
 <body>
 <h3 align="center">Update This Food</h3>
 	<form action="updateFood.do" method="POST">
-		<div class="form-group">
+		<div class="form-inline"class="form-inline">
 			<label for="name">Name: </label> 
-			<input type="text" value="${food.name}" name="name" id="name" class="form-control" required />
+			<input type="text" value="${food.name}" name="name" id="name" class="form-group" required />
 		</div>
-		<div class="form-group">
+		<div class="form-inline">
 			<label for="serving">Serving Size: </label> 
-			<input type="text" value="${food.servingSize}"name="serving" id="serving" class="form-control" required />
+			<input type="text" value="${food.servingSize}"name="serving" id="serving" class="form-group" required />
 		</div>
-		<div class="form-group">
+		<div class="form-inline">
 			<label for="calories">Calories Per Serving: </label> 
-			<input type="number" value="${food.calories}"name="calories" id="calories" class="form-control" required />
+			<input type="number" value="${food.calories}"name="calories" id="calories" class="form-group" required />
 		</div>
-		<div class="form-group">
+		<div class="form-inline"">
 			<label for="carbohydrates">Carbohydrates In Grams: </label> 
-			<input type="number" value="${food.carbohydrates}"name="carbohydrates" id="carbohydrates" class="form-control" required />
+			<input type="number" value="${food.carbohydrates}"name="carbohydrates" id="carbohydrates" class="form-group" required />
 		</div>
-		<div class="form-group">
+		<div class="form-inline">
 			<label for="fats">Fats In Grams: </label> 
-			<input type="text" value="${food.fats}" name="fats"id="fats" class="form-control" required />
+			<input type="text" value="${food.fats}" name="fats"id="fats" class="form-group" required />
 		</div>
-		<div class="form-group">
+		<div class="form-inline">
 			<label for="proteins">Proteins In Grams: </label> 
-			<input type="text" name="proteins" value="${food.proteins}"id="proteins" class="form-control" required />
+			<input type="text" name="proteins" value="${food.proteins}"id="proteins" class="form-group" required />
 		</div>
 		
 		<input type = "hidden" name = "id" value = "${food.id}"/>
-		<input type="submit" value="Update Food" class="btn btn-primary" />
+		<input type="submit" value="Update Food" class="text-center;btn btn-info" />
+
+
 
 </body>
 </html>

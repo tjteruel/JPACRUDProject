@@ -6,7 +6,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Nutrition Database</title>
+<title>
+Nutrition Database - Home
+</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -14,13 +16,19 @@
 <link rel="stylesheet" href="css/myStyles.css">
 </head>
 <body>
-	<h1 align="center">Nutrition Database</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Nutrition Database</h1>
+    <p class="lead">SD25 JPA CRUD Assignment</p>
+    <span class="border-bottom"></span>
+  </div>
+</div>
 
 <!-- Lookup food by ID -->
 <h3>Look Up Food By ID</h3>
 	<form action="getFood.do" method="GET" class="form-inline">		
 		<input type="text" value="Input Food ID" name="fid" class="form-group" />
-		<input type="submit" value="Search" class="form-group" />
+		<input type="submit" value="Search" class="btn btn-info; form-group" />
 	</form>
 	<hr>
 
@@ -28,7 +36,7 @@
 	<h3>Add Food to Database</h3>
 	<form action="addFoodPage.do" method="POST" class="form">
 	<div class="form-inline">
-		<input type="submit" value="Add Food" class="form-group" />
+		<input type="submit" value="Add Food" class="btn btn-info; form-group" />
 	</form>
 	</div>
 	<hr>

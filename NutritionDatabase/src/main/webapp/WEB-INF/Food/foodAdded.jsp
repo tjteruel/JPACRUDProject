@@ -19,7 +19,7 @@
 <div class="btn-group;text-center" role="group" style="text-align:center" >
 	<form action="home.do" method="POST">
 		<input type="hidden" name="food" /> <input
-			type="submit" value="Home" class="btn btn-primary" />
+			type="submit" value="Home" class="btn btn-info" />
 	</form>
 </div>
 	
