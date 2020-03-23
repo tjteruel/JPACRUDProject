@@ -14,19 +14,24 @@
 <link rel="stylesheet" href="css/myStyles.css">
 </head>
 <body>
-	<h1>Nutrition Database</h1>
+	<h1 align="center">Nutrition Database</h1>
 
 <!-- Lookup food by ID -->
-	<form action="getFood.do" method="GET" class="form">
-		Look Up Food By ID: <input type="text" name="fid" class="form-control" />
-		<input type="submit" value="Show Food" class="form-control" />
+<h3>Look Up Food By ID</h3>
+	<form action="getFood.do" method="GET" class="form-inline">		
+		<input type="text" value="Input Food ID" name="fid" class="form-group" />
+		<input type="submit" value="Search" class="form-group" />
 	</form>
+	<hr>
 
 <!-- add Food to db -->
 	<h3>Add Food to Database</h3>
 	<form action="addFoodPage.do" method="POST" class="form">
-		<input type="submit" value="Add Food" class="form-control" />
+	<div class="form-inline">
+		<input type="submit" value="Add Food" class="form-group" />
 	</form>
+	</div>
+	<hr>
 
 <!-- Lists entire db -->
 	<h3>All Foods in Database</h3>

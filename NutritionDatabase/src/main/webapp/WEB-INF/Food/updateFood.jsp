@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/myStyles.css">
 </head>
 <body>
+<h3 align="center">Update This Food</h3>
 	<form action="updateFood.do" method="POST">
 		<div class="form-group">
 			<label for="name">Name: </label> 

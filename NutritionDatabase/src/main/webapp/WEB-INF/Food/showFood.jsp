@@ -37,19 +37,33 @@
 		</table>
 	</div>
 
-<!-- Updates Food -->
-	<form action="updatePage.do" method="POST">
-		<input type="hidden" value="${food.id}" name="food" /> <input
-			type="submit" value="Update" class="btn btn-primary" />
-	</form>
 
-<!-- Deletes Food -->
-	<form action="deleteFood.do" method="POST">
-		<input type="hidden" value="${food.id}" name="food"/>
-		<input type="submit" value="Delete" class="btn btn-primary"/>
-	</form>
-	</tbody>
-	</table>
+		<!-- Updates Food -->
+		<div class="btn-group;text-center" role="group" style="text-align:center" >
+		<button type="button" class="btn btn-primary btn-sm" >
+		<form action="updatePage.do" method="POST" class="form-group">
+			<input type="hidden" value="${food.id}" name="food" /> <input
+				type="submit" value="Update" class="btn btn-primary" />
+		</form>
+		</button>
+
+		<!-- Deletes Food -->
+				<button type="button" class="btn btn-primary btn-sm" >
+		<form action="deleteFood.do" method="POST" class="form-group">
+			<input type="hidden" value="${food.id}" name="food" /> <input
+				type="submit" value="Delete" class="btn btn-primary" />
+		</form>
+		</button>
+		
+		<!-- Home Button -->
+				<button type="button" class="btn btn-primary btn-sm" >
+		<form action="home.do" method="POST" class="form-group">
+			<input type="hidden" name="food" /> <input
+				type="submit" value="Home" class="btn btn-primary" />
+				
+		</form>
+		</button>
+		</div>
 
 </body>
 </html>
