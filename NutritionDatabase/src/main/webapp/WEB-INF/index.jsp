@@ -19,7 +19,7 @@ Nutrition Database - Home
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Nutrition Database</h1>
-    <p class="lead">SD25 JPA CRUD Assignment</p>
+    <p class="lead">JPA CRUD Assignment</p>
     <span class="border-bottom"></span>
   </div>
 </div>
@@ -29,7 +29,7 @@ Nutrition Database - Home
 <div class-"form-inline">
 	<form action="getFood.do" method="GET" class="form">		
 		<input type="text" value="Input Food ID" name="fid" class="form-group" />
-		<input type="submit" value="Search" class="btn btn-info; form-group" />
+		<input type="submit" value="Search" class="form-group; btn btn-info" />
 	</form>
 </div>
 	<hr>
@@ -38,7 +38,7 @@ Nutrition Database - Home
 	<h3>Add Food to Database</h3>
 	<div class="form-inline">
 	<form action="addFoodPage.do" method="POST" class="form">
-		<input type="submit" value="Add Food" class="btn btn-info; form-group" />
+		<input type="submit" value="Add Food" class="form-group; btn btn-info" />
 	</form>
 	</div>
 	<hr>
