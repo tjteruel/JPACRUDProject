@@ -1,0 +1,22 @@
+## JPA CRUD Project
+
+### Overview
+
+This is a Food Nutrition Database. It displays a list of foods to the user along with nutritional information.
+The user can create new foods and add them to the database, update current food information, and delete food from the database.
+
+### Technologies Used
+
+*GitHub
+*Java
+*Spring Tool Suite
+*Bootstrap
+*HTML/CSS
+*Gradle
+
+### Lessons Learned
+
+I learned about the importance of attention to detail. There are many moving parts that all need
+to be in sync. If anything is off, the JSPs cannot communicate with one another. This was also my first
+in depth dive into using Boostrap, HTML, and CSS. Mastering webpage design will ensure that I can
+accurately and effectively display the information that I need to the user.

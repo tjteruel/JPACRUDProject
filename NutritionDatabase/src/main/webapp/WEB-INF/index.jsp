@@ -26,16 +26,18 @@ Nutrition Database - Home
 
 <!-- Lookup food by ID -->
 <h3>Look Up Food By ID</h3>
-	<form action="getFood.do" method="GET" class="form-inline">		
+<div class-"form-inline">
+	<form action="getFood.do" method="GET" class="form">		
 		<input type="text" value="Input Food ID" name="fid" class="form-group" />
 		<input type="submit" value="Search" class="btn btn-info; form-group" />
 	</form>
+</div>
 	<hr>
 
 <!-- add Food to db -->
 	<h3>Add Food to Database</h3>
-	<form action="addFoodPage.do" method="POST" class="form">
 	<div class="form-inline">
+	<form action="addFoodPage.do" method="POST" class="form">
 		<input type="submit" value="Add Food" class="btn btn-info; form-group" />
 	</form>
 	</div>

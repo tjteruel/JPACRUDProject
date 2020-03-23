@@ -21,8 +21,8 @@
 			<input type="text" name="name" id="name" class="form-control" required />
 		</div>
 		<div class="form-group">
-			<label for="serving">Serving Size: </label> 
-			<input type="text" name="serving" id="serving" class="form-control" required />
+			<label for="servingSize">Serving Size: </label> 
+			<input type="text" name="servingSize" id="servingSize" class="form-control" required />
 		</div>
 		<div class="form-group">
 			<label for="calories">Calories Per Serving: </label> 
